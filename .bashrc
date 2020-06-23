@@ -1,3 +1,6 @@
+# let's start by making sure we have the latest dotfiles
+yadm pull
+
 # find by typing `uname -n`
 nygcbook="ASHAIBER01"
 macbook="Alons-MBP.stny.rr.com"
