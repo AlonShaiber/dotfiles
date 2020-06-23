@@ -82,6 +82,7 @@ if [[ "$mski_server" =~ "$(uname -n)" ]]; then
     export LOCKPRG='/bin/true' 
     export LD_LIBRARY_PATH=~/modules/Snowman:$LD_LIBRARY_PATH:~/modules/Snowman/lib
     export PATH=~/software/emacs-25.2/bin/:~/lab/Software/mosh/bin/:~/lab/Software/Juicer/:~/lab/.local/bin/:~/git/dapars/:~/lab/git/MACS/bin/:~/scripts/:~/modules/Snowman/:~/modules/STAR:/nethome/mimielinski/Software/sshpass-1.05:~/Software/sratoolkit.2.5.7-centos_linux64/bin:~/Software/HMMCopy/HMMcopy/bin/:~/Software/UCSC/:$PATH:$HOME/bin:$HOME/dev/scripts/:$HOME/Scripts/bash:~/lab/Software/CPLEX/CPLEX_Studio/cplex/bin/x86-64_linux/
+    export PATH=~/myscripts:$PATH
 
     export SKI_DB_ROOT="~/DB/"
     export SKI_SOFTWARE_ROOT="~/Software/"
