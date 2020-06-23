@@ -43,7 +43,7 @@ silent! if plug#begin()
     Plug       'morhetz/gruvbox'
     Plug   'davidhalter/jedi-vim'
     Plug        'sjbach/lusty'
-    Plug      'falvesaq/Nvim-R'
+    Plug      'jalvesaq/Nvim-R'
     Plug 'vim-syntastic/syntastic'
     Plug     'godlygeek/tabular'
     Plug    'majutsushi/tagbar'
@@ -111,6 +111,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+tnoremap <C-J> <C-W><C-J>
+tnoremap <C-K> <C-W><C-K>
+tnoremap <C-L> <C-W><C-L>
+tnoremap <C-H> <C-W><C-H>
 
 " moving around splits with arrows
 nnoremap <Leader><Right> <C-w>l
