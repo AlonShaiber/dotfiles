@@ -240,6 +240,8 @@ vmap \ <Plug>RDSendSelection
 " remapping selection :: send multiple lines + echo lines
 vmap \e <Plug>RESendSelection
 
+" run entire paragraph and jump to the line after the paragraph
+nmap \\ <localleader>pp }
 " -----------------------------------------------------------------
 " }}} vim-airline {{{  # beefs the status bar
 " -----------------------------------------------------------------
