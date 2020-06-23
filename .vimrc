@@ -231,6 +231,8 @@ au BufNewFile,BufRead *.snake set syntax=snakemake
 
 let R_assign=0 " dont replace _ with <-, i am a big boy
 
+let R_buffer_opts = ""
+
 " remapping the basic :: send line
 nmap \ <Plug>RDSendLine
 " remapping selection :: send multiple lines

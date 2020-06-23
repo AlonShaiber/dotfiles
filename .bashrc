@@ -49,7 +49,121 @@ if [[ "$macbook" =~ "$(uname -n)" ]]; then
     else
        export R_LIBS=$MY_R_LIBS
     fi
-fi
+
+    # I added this for MacPorts (to my understanding it was supposed to be added automatically, but it wasn't)
+    # for more information, visit https://guide.macports.org/chunked/installing.shell.html. without this Macport doesn't work
+    # export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+    # alias for python (so python referes to python3
+    #alias python='python3'
+
+    ## Add MyScripts to the path
+    ## MyScripts is where I keep random standalone scripts
+    export PATH=$PATH:/Users/alonshaiber/MyScripts
+
+    # path to medusa
+    export PATH=$PATH:/Users/alonshaiber/github/medusa
+    export PATH=$PATH:/Users/alonshaiber/github/medusa/medusa_scripts
+
+    # CENTRIFUGE - updating path to also point to centrifuge
+    export CENTRIFUGE_BASE="/usr/local/centrifuge"
+    export PATH=$PATH:$CENTRIFUGE_BASE/centrifuge
+
+    # updating environment variables (after installing anvio: http://merenlab.org/2016/06/26/installation-v2/#installation-for-developers-youre-a-wizard-arry)
+    #export PYTHONPATH=$PYTHONPATH:~/github/anvio/
+    #export PATH=$PATH:~/github/anvio/bin:~/github/anvio/sandbox
+
+    # updating path to include Metagenome-profile
+    export PATH=$PATH:~/github/Metagenome-profile
+
+
+    # Adding MUMmer3.23 to the path
+    export PATH=$PATH:/Users/alonshaiber/MyLibraries/MUMmer3.23
+
+    # apache-ant
+    export ANT_HOME=/usr/local/apache-ant-1.9.7
+    export PATH=$PATH:$ANT_HOME/bin
+
+    # JAVA JDK
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
+
+    # bowtie2
+    export PATH=$PATH:~/MyLibraries/bowtie2-2.2.9
+    export BT2_HOME="/Users/alonshaiber/MyLibraries/bowtie2-2.2.9"
+
+    # Metaphlan2
+    export PATH=$PATH:/Users/alonshaiber/MyLibraries/biobakery-metaphlan2-ec7727ff1875
+    export mpa_dir=/Users/alonshaiber/MyLibraries/biobakery-metaphlan2-ec7727ff1875
+
+    # bwa
+    export PATH=$PATH:/Users/alonshaiber/MyLibraries/bwa-0.7.12
+
+    # Bandage
+    export PATH=$PATH:/Users/alonshaiber/Downloads/Bandage_Mac_v0_8_0/Bandage.app/Contents/MacOS/
+
+    # MACg
+    #export PATH=$PATH:/Users/alonshaiber/PycharmProjects/MACg/bin:/Users/alonshaiber/PycharmProjects/MACg/tests
+    #export PYTHONPATH=$PYTHONPATH:/Users/alonshaiber/PycharmProjects/MACg/
+    #export PATH=$PATH:/Users/alonshaiber/PycharmProjects
+
+    # PRICE assembler
+    export PATH=$PATH:/Users/alonshaiber/MyLibraries/PriceSource140408
+
+    # gcc (installed by brew)
+    # in order for gcc to be invoked (and not clang), I did:
+    # $ cd /usr/local/bin
+    # $ ln -s  gcc-6  gcc
+    # $ ln -s g++-6 g++
+    # after using these, I then deleted them (could always be put back):
+    # $ cd /usr/local/bin
+    # $ rm gcc g++
+
+    #prodigal
+
+    export PATH=$PATH:/Users/alonshaiber/MyLibraries/Prodigal-2.6.2
+
+    alias anvi-activate="source ~/virtual-envs/anvio-master/bin/activate; export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES"
+
+    # set up key for ascp access to HMP
+    export ASPERA_SCP_PASS=hmpsucks
+
+    # set alias for inkscape
+    alias inkscape=/Applications/Inkscape.app/Contents/Resources/bin/inkscape
+
+    # added by Miniconda3 installer
+    # export PATH="/Users/alonshaiber/miniconda3/bin:$PATH"  # commented out by conda initialize  # commented out by conda initialize
+
+    # Add NCBI_DB and gimmetaxa to the path (https://github.com/kblin/ncbi-genome-download#contributed-scripts-gimme_taxapy)
+    export PATH="/Users/alonshaiber/MyLibraries/NCBI_TAXONOMY_DB:$PATH"
+
+    # Adding some random scripts to my path
+    export PATH="/Users/alonshaiber/MyLibraries/Mybin:$PATH"
+
+    # Adding minimap2 to my path
+    export PATH="~/github/minimap2:$PATH"
+
+    ## Adding sratoolkit
+    export PATH="/Users/alonshaiber/MyLibraries/sratoolkit.2.9.6-1-mac64/bin:$PATH"
+
+    ## adding oral toolkit to the path
+    export PATH="/Users/alonshaiber/github/2018_Shaiber_Delmont_et_al_Saccharibacteria/scripts/OralMGXUtils:$PATH"
+    export PYTHONPATH=$PYTHONPATH:/Users/alonshaiber/github/2018_Shaiber_Delmont_et_al_Saccharibacteria/scripts/OralMGXUtils
+
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('/Users/alonshaiber/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "/Users/alonshaiber/miniconda3/etc/profile.d/conda.sh" ]; then
+            . "/Users/alonshaiber/miniconda3/etc/profile.d/conda.sh"
+        else
+            export PATH="/Users/alonshaiber/miniconda3/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
+    # <<< conda initialize <<<
+    fi
 
 if [[ "$mski_server" =~ "$(uname -n)" ]]; then
 
