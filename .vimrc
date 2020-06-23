@@ -231,6 +231,13 @@ au BufNewFile,BufRead *.snake set syntax=snakemake
 
 let R_assign=0 " dont replace _ with <-, i am a big boy
 
+" remapping the basic :: send line
+nmap \ <Plug>RDSendLine j
+" remapping selection :: send multiple lines
+vmap \ <Plug>RDSendSelection j
+" remapping selection :: send multiple lines + echo lines
+vmap \e <Plug>RESendSelection j
+
 " -----------------------------------------------------------------
 " }}} vim-airline {{{  # beefs the status bar
 " -----------------------------------------------------------------
