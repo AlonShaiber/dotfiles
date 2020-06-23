@@ -53,12 +53,6 @@ fi
 
 if [[ "$mski_server" =~ "$(uname -n)" ]]; then
 
-    # -------------------------------------------------------------------------
-    # Alon's stuff
-    # -------------------------------------------------------------------------
-    module load vim/8.2.0
-
-    # -------------------------------------------------------------------------
     # From here below this is stuff I adopted as-is from Marcin
     # -------------------------------------------------------------------------
  
@@ -170,5 +164,13 @@ if [[ "$mski_server" =~ "$(uname -n)" ]]; then
     alias gdc="module unload  python/3.5.1; module load python/2.7.11; ~/software/GDC/gdc-client download -m"
     alias lynx="/gpfs/commons/home/mimielinski/Software/lynx2.8.9dev.14/lynx ./lynx -cfg /gpfs/commons/home/mimielinski/Software/lynx2.8.9dev.14/lynx.cfg -lss /gpfs/commons/home/mimielinski/Software/lynx2.8.9dev.14//lynx.lss"
     #alias ls="TERM=ansi ls --color=always"
+
+    # -------------------------------------------------------------------------
+    # Alon's stuff
+    # -------------------------------------------------------------------------
+    echo "Loading vim"
+    module load vim/8.2.0
+
+    # -------------------------------------------------------------------------
 # >>>>> Done with mski_server configurations <<<<< 
 fi
