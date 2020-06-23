@@ -110,16 +110,15 @@ if [[ "$mski_server" =~ "$(uname -n)" ]]; then
 
     if [ $( grep 'CentOS Linux release 7' /etc/redhat-release | wc -l ) -eq "1" ]
     then
-        foo='~/lab/lib/R-3.5.1/:/nfs/sw/R/R-3.5.1/lib64/R/library/'
-        echo "Centos 7 detected: R_LIBS=$foo" 1>&2
+        myRLibs='/gpfs/commons/groups/imielinski_lab/lib/R-3.6.1'
+        echo "Centos 7 detected: R_LIBS=$myRLibs" 1>&2
         module load bedtools ## centos 7 version
-        module remove python/2.7.8  # default load, python/3.5.1
-        module load python/3.5.1    # default load, python/3.5.1
+        module unload python
+        module load python/3.7.1
         
-    #    export R_LIBS="/data/research/mski_lab/Software/R7"
         module unload R
-        module load R/3.5.1
-        export R_LIBS=$foo
+        module load R/3.6.1
+        export R_LIBS=$myRLibs
     else
         export PATH="/gpfs/commons/groups/imielinski_lab/Software/miniconda3/bin:$PATH"
     #    export PATH="/gpfs/commons/home/mimielinski/Software/miniconda3/bin:$PATH"
