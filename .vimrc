@@ -145,7 +145,8 @@ set noerrorbells
 set visualbell
 set backspace=indent,eol,start
 
-execute pathogen#infect()
+" I think there is no mor 
+"execute pathogen#infect()
 
 set term=xterm-256color
 set background=dark
