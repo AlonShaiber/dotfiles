@@ -71,6 +71,9 @@ set mouse=a
 set foldmethod=indent
 set foldlevel=20
 
+" toggle displaying and hiding numbers with <leader>n
+nnoremap <leader>n :set number!<CR>
+
 " mapping jk to esc so it is easy to escape
 :inoremap jk <esc>
 :vnoremap jk <esc>
