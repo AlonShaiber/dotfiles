@@ -207,8 +207,8 @@ if [[ "$mski_server" =~ "$(uname -n)" ]]; then
 
     module load samtools
     module load meme/4.11.2
-    module load sratoolkit/2.8.1
-    module load gcc/6.2.0
+    module load sratoolkit/2.9.6
+    module load gcc/8.2.0
     #module load java/1.8
     #module add gcc/4.9.2
     #module load bwa/0.7.12
