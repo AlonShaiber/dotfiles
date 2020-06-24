@@ -167,6 +167,8 @@ if [[ "$macbook" =~ "$(uname -n)" ]]; then
 
 if [[ "$mski_server" =~ "$(uname -n)" ]]; then
 
+    echo "Hi $USER, setting up your configuration right away!"
+
     # From here below this is stuff I adopted as-is from Marcin
     # -------------------------------------------------------------------------
  
