@@ -54,6 +54,10 @@ silent! if plug#begin()
     Plug      'airblade/vim-gitgutter'
     Plug      'jreybert/vimagit'
     Plug         'tpope/vim-surround'
+    Plug 'roxma/nvim-completion-manager'
+    Plug 'gaalcaras/ncm-R'
+    " for R snippet support:
+    Plug 'sirver/UltiSnips'
 
   call plug#end()
 endif
