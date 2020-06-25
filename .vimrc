@@ -109,6 +109,10 @@ ino <left> <Nop>
 ino <right> <Nop>
 ino <up> <Nop>
 
+" insert user name and timestamp and go into insert mode
+nnoremap <C-c>d :r !whoami<CR>$a <esc>"=strftime('%c')<C-M>p0i#' <esc>o
+inoremap <C-c>d <esc>:r !whoami<CR>$a <esc>"=strftime('%c')<C-M>p0i#' <esc>o
+
 " moving around splits with jhkl
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
