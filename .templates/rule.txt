@@ -1,0 +1,10 @@
+rule NEWRULE:
+    version: 1.0
+    log: os.path.join(dirs_dict["LOGS_DIR"], "{sample}-NEWRULE.log"
+    input:
+    output:
+    params:
+    threads: M.T('NEWRULE')
+    resources: nodes = M.T('NEWRULE')
+    shell: " >> {log} 2>&1
+
