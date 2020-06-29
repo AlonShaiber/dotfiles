@@ -231,6 +231,14 @@ au BufNewFile,BufRead *.rules set syntax=snakemake
 au BufNewFile,BufRead *.snakefile set syntax=snakemake
 au BufNewFile,BufRead *.snake set syntax=snakemake
 
+" insert template rule
+" credit to: Paolo Tedesco (https://stackoverflow.com/a/690439/7115450)
+function! Rule()
+    r~/.templates/rule.txt
+endfunction
+
+nnoremap <C-N> :call Rule()<CR>
+
 
 " -----------------------------------------------------------------
 " }}} Nvim-R {{{  #  turn vim into an R environment
