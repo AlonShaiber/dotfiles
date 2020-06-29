@@ -257,6 +257,22 @@ vmap \e <Plug>RESendSelection
 
 " run entire paragraph and jump to the line after the paragraph
 nmap \\ <localleader>pp }
+
+" -----------------------------------------------------------------
+"  Tag setup for R
+" -----------------------------------------------------------------
+" adopted from: https://github.com/majutsushi/tagbar/wiki#r
+" If you use this make sure to refer to the link and make the proper
+" adjustments to the ~/.ctags file.
+let g:tagbar_type_r = {
+    \ 'ctagstype' : 'r',
+    \ 'kinds'     : [
+        \ 'f:Functions',
+        \ 'g:GlobalVariables',
+        \ 'v:FunctionVariables',
+    \ ]
+\ }
+
 " -----------------------------------------------------------------
 " }}} vim-airline {{{  # beefs the status bar
 " -----------------------------------------------------------------
