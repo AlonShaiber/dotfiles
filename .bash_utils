@@ -1,9 +1,13 @@
 function mskisetup {
 # >>>>> m-ski stuff >>>>>
 
-    alias mski='ssh -Y ashaiber@mskilab'
+    alias mski='ssh ashaiber@mskilab'
     alias scu='ssh -Y ashaiber@scu'
     alias gmski='cd ~/Dropbox/mski'
+
+    #' adding SnakeSki to the python path
+    export PYTHONPATH=$PYTHONPATH:~/github/SnakeSki
+
 
 # <<<<< m-ski stuff <<<<<
 }
