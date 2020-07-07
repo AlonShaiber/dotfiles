@@ -7,6 +7,8 @@ function mskisetup {
 
     #' adding SnakeSki to the python path
     export PYTHONPATH=$PYTHONPATH:~/github/SnakeSki
+    #' adding SnakeSki bin and sandbox to the PATH
+    export PATH=$PATH:~/github/SnakeSki/bin:~/github/SnakeSki/sandbox
 
 
 # <<<<< m-ski stuff <<<<<

@@ -41,6 +41,7 @@ endif
 
 silent! if plug#begin()
     Plug       'morhetz/gruvbox'
+    Plug 'jupyter-vim/jupyter-vim'
     Plug   'davidhalter/jedi-vim'
     Plug        'sjbach/lusty'
     Plug      'jalvesaq/Nvim-R'
