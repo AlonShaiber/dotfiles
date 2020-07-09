@@ -187,6 +187,8 @@ if [[ "$mski_server" =~ "$(uname -n)" ]]; then
     # User specific environment and startup programs
     stty -ixon
 
+    export CPLEX_DIR=/gpfs/commons/home/mimielinski/lab/Software/CPLEX/CPLEX_Studio/
+
     # Source global definitions
     if [ -f /etc/bashrc ]; then
           bash /etc/bashrc
