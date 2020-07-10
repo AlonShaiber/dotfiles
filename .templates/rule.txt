@@ -1,6 +1,6 @@
 rule NEWRULE:
     version: 1.0
-    log: os.path.join(dirs_dict["LOGS_DIR"], "{sample}-NEWRULE.log"
+    log: os.path.join(dirs_dict["LOGS_DIR"], "{pair}-NEWRULE.log"
     input:
     output:
     params:
