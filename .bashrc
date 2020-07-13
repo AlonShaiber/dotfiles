@@ -5,6 +5,7 @@ yadm pull
 nygcbook="ASHAIBER01"
 macbook="Alons-MBP.stny.rr.com"
 mski_server="mskilab01.c.nygenome.org"
+mski_server2="mskilab02.c.nygenome.org"
 
 # -----------------------------------------------------------------------------
 # SHARED BY ALL {{{
@@ -165,7 +166,7 @@ if [[ "$macbook" =~ "$(uname -n)" ]]; then
     # <<< conda initialize <<<
     fi
 
-if [[ "$mski_server" =~ "$(uname -n)" ]]; then
+if [[ "$mski_server" =~ "$(uname -n)" ]] || [[ "$mski_server2" =~ "$(uname -n)" ]]; then
 
     echo "Hi $USER, setting up your configuration right away!"
 
