@@ -4,11 +4,14 @@ function mskisetup {
     alias mski='ssh ashaiber@mskilab'
     alias scu='ssh -Y ashaiber@scu'
     alias gmski='cd ~/Dropbox/mski'
+    alias s="cd /Users/alonshaiber/github/SnakeSki"
 
     #' adding SnakeSki to the python path
     export PYTHONPATH=$PYTHONPATH:~/github/SnakeSki
     #' adding SnakeSki bin and sandbox to the PATH
     export PATH=$PATH:~/github/SnakeSki/bin:~/github/SnakeSki/sandbox
+    #' add a file with default values
+    export SnakeSkiDefaults=~/.SnakeSkiDefaults
 
 
 # <<<<< m-ski stuff <<<<<
@@ -21,7 +24,6 @@ function merenlabsetup {
     alias b="ssh barhal"
     alias w="cd ~/00_Projects/Classification_of_genes_with_metagenomes/Bfrag/"
     alias a="cd ~/github/anvio"
-    alias s="cd /Users/alonshaiber/github/MerenLab-workflows"
     alias fmt="cd /Users/alonshaiber/00_Projects/FMT/"
     alias barhali="ssh -L 32120:localhost:32120 -L 32121:localhost:32121 -L 32122:localhost:32122 -L 32123:localhost:32123 -L 32124:localhost:32124 -L 32125:localhost:32125 -L 32126:localhost:32126 -L 32127:localhost:32127 -L 32128:localhost:32128 -L 32129:localhost:32129 barhal | tee /dev/tty | python3 ~/.ssh/run_webbrowser.py"
     export m="ashaiber@barhal:"

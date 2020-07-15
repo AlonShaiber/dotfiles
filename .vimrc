@@ -238,7 +238,13 @@ function! Rule()
     r~/.templates/rule.txt
 endfunction
 
+" insert template param
+function! Param()
+    r~/.templates/param.txt
+endfunction
+
 nnoremap <C-N> :call Rule()<CR>
+nnoremap <leader>p :call Param()<CR>
 
 
 " -----------------------------------------------------------------
