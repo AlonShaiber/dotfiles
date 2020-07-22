@@ -81,6 +81,7 @@ nnoremap <leader>n :set number!<CR>
 
 " remap vv to :vsplit
 nnoremap <silent> vv <C-w>v
+nnoremap <silent> vs <C-w>s
 
 " mapping ff to :x (save and exit)
 nnoremap ff :x<cr>
