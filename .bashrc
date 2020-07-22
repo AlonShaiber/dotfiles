@@ -170,6 +170,9 @@ if [[ "$mski_server" =~ "$(uname -n)" ]] || [[ "$mski_server2" =~ "$(uname -n)" 
 
     echo "Hi $USER, setting up your configuration right away!"
 
+    # aliases and the likes that I define in my .bash_utils
+    mskiserversetup
+
     # From here below this is stuff I adopted as-is from Marcin
     # -------------------------------------------------------------------------
 

@@ -17,6 +17,12 @@ function mskisetup {
 # <<<<< m-ski stuff <<<<<
 }
 
+function mskiserversetup {
+# <<<<< m-ski server stuff <<<<<
+    alias aa='cd ~/public_html/AA_PRAD/' # folder that holds the 
+    alias a='cd ~/projects/AA_PRAD/' # folder that holds the 
+# <<<<< m-ski server stuff <<<<<
+
 function merenlabsetup {
 # >>>>> meren lab stuff >>>>>
 
