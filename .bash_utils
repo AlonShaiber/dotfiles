@@ -21,6 +21,7 @@ function mskiserversetup {
 # <<<<< m-ski server stuff <<<<<
     alias aa='cd ~/public_html/AA_PRAD/' # folder that holds the 
     alias a='cd ~/projects/AA_PRAD/' # folder that holds the 
+    alias s='cd ~/git/SnakeSki/'
 # <<<<< m-ski server stuff <<<<<
 }
 
