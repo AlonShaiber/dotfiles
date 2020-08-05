@@ -26,14 +26,28 @@ if [ -f ~/.bash_utils ]; then
     source ~/.bash_utils
 fi
 
-# autocorrects small mistakes
-shopt -s cdspell
+if [ "$SHELL" != "/bin/zsh" ]; then
+    # autocorrects small mistakes
+    shopt -s cdspell
+fi
 
 # ls coloring
 export CLICOLOR=1
 export LSCOLORS=gxhxCxDxBxegedabagaced
 
 
+# -----------------------------------------------------------------------------
+# }}} NYGC MACBOOK {{{
+# -----------------------------------------------------------------------------
+if [[ "$nygcbook" =~ "$(uname -n)" ]]; then
+    echo "Hello"
+    nygcbooksetup
+    mskisetup
+    merenlabsetup
+
+    export PATH=/usr/local/sbin:${PATH}
+    export PATH=${PATH}:/Users/ashaiber/Library/Python/3.7/bin
+fi
 # -----------------------------------------------------------------------------
 # }}} MY MACBOOK {{{
 # -----------------------------------------------------------------------------
