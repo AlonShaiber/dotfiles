@@ -9,6 +9,7 @@
 " wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
 " tar -zxvf ctags-5.8.tar.gz
 " cd ctags-5.8 && ./configure && make && sudo make install
+" NOTICE: for new MAC OS I had to use brew to install ctags
 "
 " install pathogen:
 " mkdir -p ~/.vim/autoload ~/.vim/bundle && \
