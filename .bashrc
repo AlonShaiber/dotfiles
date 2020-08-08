@@ -31,7 +31,7 @@ if [ "$SHELL" != "/bin/zsh" ]; then
     shopt -s cdspell
 fi
 
-if [ "$SHELL" == "/bin/zsh" ]; then
+if [ "$SHELL" =~ "/bin/zsh" ]; then
     # make fg behave as in bash
     # taken from: https://superuser.com/a/991249 with thanks to meuh
     fg(){ if [[ "$*" =~ ^[0-9]+$ ]]; then builtin fg %"$*";else builtin fg "$@";fi }
