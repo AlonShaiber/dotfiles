@@ -3,7 +3,7 @@ yadm pull
 
 # find by typing `uname -n`
 nygcbook="ASHAIBER01"
-macbook="Alons-MBP.stny.rr.com"
+macbook="Alons-MBP"
 mski_server="mskilab01.c.nygenome.org"
 mski_server2="mskilab02.c.nygenome.org"
 
@@ -31,7 +31,7 @@ if [ "$SHELL" != "/bin/zsh" ]; then
     shopt -s cdspell
 fi
 
-if [ "$SHELL" =~ "/bin/zsh" ]; then
+if [ "$SHELL" = "/bin/zsh" ]; then
     # make fg behave as in bash
     # taken from: https://superuser.com/a/991249 with thanks to meuh
     fg(){ if [[ "$*" =~ ^[0-9]+$ ]]; then builtin fg %"$*";else builtin fg "$@";fi }
@@ -58,7 +58,7 @@ fi
 # }}} MY MACBOOK {{{
 # -----------------------------------------------------------------------------
 
-if [[ "$macbook" =~ "$(uname -n)" ]]; then
+if [[ $(uname -n) == *"$macbook"* ]]; then
 
     macsetup
     mskisetup
