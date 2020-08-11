@@ -268,7 +268,7 @@ if [[ "$mski_server" =~ "$(uname -n)" ]] || [[ "$mski_server2" =~ "$(uname -n)" 
     fi
 
     # exuberant ctags (needed for vim)
-    export ctags=/gpfs/commons/home/ashaiber/mybin/ctags-5.8/ctags
+    export PATH=/gpfs/commons/home/ashaiber/mybin/ctags-5.8/:$PATH
 
     alias jupyter_run="xvfb-run jupyter notebook --notebook-dir=~/"
 
