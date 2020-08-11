@@ -267,6 +267,8 @@ if [[ "$mski_server" =~ "$(uname -n)" ]] || [[ "$mski_server2" =~ "$(uname -n)" 
         export PYTHONPATH=/gpfs/commons/groups/imielinski_lab/lib/python-3.5.1-CentOS6/site-packages
     fi
 
+    # exuberant ctags (needed for vim)
+    export ctags=/gpfs/commons/home/ashaiber/mybin/ctags-5.8/ctags
 
     alias jupyter_run="xvfb-run jupyter notebook --notebook-dir=~/"
 
