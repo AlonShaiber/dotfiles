@@ -2,6 +2,7 @@ function mskisetup {
 # >>>>> m-ski stuff >>>>>
 
     echo "Loading mski related stuff"
+    alias mski2='ssh ashaiber@mskilab02.c.nygenome.org'
     alias mski='ssh ashaiber@mskilab'
     alias scu='ssh -Y ashaiber@scu'
     alias gmski='cd ~/Dropbox/mski'
