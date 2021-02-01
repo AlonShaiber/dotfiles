@@ -316,6 +316,10 @@ if [[ "$mski_server" =~ "$(uname -n)" ]] || [[ "$mski_server2" =~ "$(uname -n)" 
     echo "Loading vim"
     module load vim/8.2.0
 
+    # add path to latest binutils
+    # I needed this in order to install the package gert in R
+    # this is commented out, but kept here for documentation purposes
+    # export PATH=/gpfs/commons/home/ashaiber/mybin/binutils/bin:$PATH
 # -------------------------------------------------------------------------
 # >>>>> Done with mski_server configurations <<<<< 
 fi
