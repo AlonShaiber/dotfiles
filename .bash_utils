@@ -60,4 +60,6 @@ function nygcbooksetup {
     printf '\033[0;31m'"aliasing sed to gsed"'\033[0m'"\n"
     alias sed=gsed
     export excel="Microsoft Excel"
+
+    alias n='cd ~/Dropbox/mski/NEPC/' # folder that holds the 
 }
