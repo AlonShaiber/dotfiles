@@ -53,6 +53,7 @@ if [[ "$nygcbook" =~ "$(uname -n)" ]]; then
 
     export PATH=/usr/local/sbin:${PATH}
     export PATH=${PATH}:/Users/ashaiber/Library/Python/3.7/bin
+    export PATH=${PATH}:/Users/ashaiber/software/miniconda3/bin
 fi
 # -----------------------------------------------------------------------------
 # }}} MY MACBOOK {{{
