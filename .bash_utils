@@ -29,6 +29,7 @@ function mskiserversetup {
     alias s='cd ~/git/SnakeSki/'
     alias t='cd ~/tasks'
     alias m='cd ~/modules'
+    alias wo='cd /gpfs/commons/projects/nepc/reprocess-woodcock-data'
 # <<<<< m-ski server stuff <<<<<
 }
 
