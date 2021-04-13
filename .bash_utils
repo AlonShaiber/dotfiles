@@ -22,14 +22,7 @@ function mskisetup {
 
 function mskiserversetup {
 # <<<<< m-ski server stuff <<<<<
-    alias aa='cd ~/public_html/AA_PRAD/' # folder that holds the 
-    alias a='cd ~/projects/AA_PRAD/' # folder that holds the 
-    alias n='cd ~/projects/NEPC/' # folder that holds the 
-    alias T='cd ~/projects/TGCT/' # folder that holds the 
-    alias s='cd ~/git/SnakeSki/'
-    alias t='cd ~/tasks'
-    alias m='cd ~/modules'
-    alias wo='cd /gpfs/commons/projects/nepc/reprocess-woodcock-data'
+    source ~/.bash_utils_mski
 # <<<<< m-ski server stuff <<<<<
 }
 
