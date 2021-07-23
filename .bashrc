@@ -238,6 +238,7 @@ if [[ "$mski_server" =~ "$(uname -n)" ]] || [[ "$mski_server2" =~ "$(uname -n)" 
     module load gcc/8.2.0
     module load bcftools
     module load java/1.8
+    module load git-lfs
     #module add gcc/4.9.2
     #module load bwa/0.7.12
     #module load perl/5.10.0
@@ -251,14 +252,16 @@ if [[ "$mski_server" =~ "$(uname -n)" ]] || [[ "$mski_server2" =~ "$(uname -n)" 
 
     if [ $( grep 'CentOS Linux release 7' /etc/redhat-release | wc -l ) -eq "1" ]
     then
-        myRLibs='/gpfs/commons/groups/imielinski_lab/lib/R-3.6.1'
+        #myRLibs='/gpfs/commons/groups/imielinski_lab/lib/R-3.6.1'
+        myRLibs='/gpfs/commons/groups/imielinski_lab/lib/R-4.0.2'
         echo "Centos 7 detected: R_LIBS=$myRLibs" 1>&2
         module load bedtools ## centos 7 version
         module unload python
         module load python/3.7.1
         
         module unload R
-        module load R/3.6.1
+        #module load R/3.6.1
+        module load R/4.0.2
         export R_LIBS=$myRLibs
     else
         export PATH="/gpfs/commons/groups/imielinski_lab/Software/miniconda3/bin:$PATH"
@@ -307,7 +310,7 @@ if [[ "$mski_server" =~ "$(uname -n)" ]] || [[ "$mski_server2" =~ "$(uname -n)" 
     alias vnckill="vncserver -kill"
     alias cnode="qrsh -q commons.q -l h_vmem=80G"
     alias pnode="qrsh -q prod.q -l h_vmem=80G"
-    alias gdc="module unload  python/3.5.1; module load python/2.7.11; ~/software/GDC/gdc-client download -m"
+    alias gdc='module unload python/3.7.1; module load gdc; gdc-client'
     alias lynx="/gpfs/commons/home/mimielinski/Software/lynx2.8.9dev.14/lynx ./lynx -cfg /gpfs/commons/home/mimielinski/Software/lynx2.8.9dev.14/lynx.cfg -lss /gpfs/commons/home/mimielinski/Software/lynx2.8.9dev.14//lynx.lss"
     #alias ls="TERM=ansi ls --color=always"
 
