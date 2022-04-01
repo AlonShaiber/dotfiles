@@ -6,6 +6,7 @@ nygcbook="ASHAIBER01"
 macbook="Alons-MBP"
 mski_server="mskilab01.c.nygenome.org"
 mski_server2="mskilab02.c.nygenome.org"
+dev="dev-alon"
 
 # -----------------------------------------------------------------------------
 # SHARED BY ALL {{{
@@ -41,6 +42,14 @@ fi
 export CLICOLOR=1
 export LSCOLORS=gxhxCxDxBxegedabagaced
 
+
+# -----------------------------------------------------------------------------
+# }}} Immunai dev VM {{{
+# -----------------------------------------------------------------------------
+if [[ "$dev" =~ "$(uname -n)" ]]; then
+    echo "Hello"
+    export PATH="/usr/lib/google-cloud-sdk/bin/:${PATH}"
+fi
 
 # -----------------------------------------------------------------------------
 # }}} NYGC MACBOOK {{{
