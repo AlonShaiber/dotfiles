@@ -6,6 +6,7 @@ nygcbook="ASHAIBER01"
 macbook="Alons-MBP"
 mski_server="mskilab01.c.nygenome.org"
 mski_server2="mskilab02.c.nygenome.org"
+immunaibook="Immunai-MB02.local"
 dev="dev-alon"
 
 # -----------------------------------------------------------------------------
@@ -42,6 +43,17 @@ fi
 export CLICOLOR=1
 export LSCOLORS=gxhxCxDxBxegedabagaced
 
+
+# -----------------------------------------------------------------------------
+# }}} IMMUNAI MACBOOK {{{
+# -----------------------------------------------------------------------------
+if [[ "$immunaibook" =~ "$(uname -n)" ]]; then
+    echo "Hello"
+    source .immunairc
+
+    alias python=/usr/local/bin/python3
+
+fi
 
 # -----------------------------------------------------------------------------
 # }}} Immunai dev VM {{{
