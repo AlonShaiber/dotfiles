@@ -61,6 +61,7 @@ fi
 if [[ "$dev" =~ "$(uname -n)" ]]; then
     echo "Hello"
     export PATH="/usr/lib/google-cloud-sdk/bin/:${PATH}"
+    export EXTERNAL_GIT_DIR="${HOME}/immunai-product"
 fi
 
 # -----------------------------------------------------------------------------
