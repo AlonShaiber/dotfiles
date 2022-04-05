@@ -64,6 +64,8 @@ if [[ "$dev" =~ "$(uname -n)" ]]; then
     echo "Hello"
     export PATH="/usr/lib/google-cloud-sdk/bin/:${PATH}"
     export EXTERNAL_GIT_DIR="${HOME}/immunai-product"
+    alias rstud="RSTUDIO_PORT=9123 EXTERNAL_GIT_DIR="${HOME}/immunai-product" EXTERNAL_DATA_DIR="${HOME}/data" immunai-product/modules/containers/docker_root/analysis/bin/start-rstudio"
+    alias cont="EXTERNAL_GIT_DIR="${HOME}/immunai-product" EXTERNAL_DATA_DIR="${HOME}/data" immunai-product/modules/containers/docker_root/analysis/bin/start-container"
 fi
 
 # -----------------------------------------------------------------------------
