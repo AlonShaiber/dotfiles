@@ -1,3 +1,7 @@
+# if you're scp-ing, we're done
+if [ -z "$PS1" ]; then
+    return
+fi
 # let's start by making sure we have the latest dotfiles
 yadm pull
 
@@ -13,10 +17,6 @@ dev="dev-alon"
 # SHARED BY ALL {{{
 # -----------------------------------------------------------------------------
 
-# if you're scp-ing, we're done
-if [ -z "$PS1" ]; then
-    return
-fi
 
 # Define your aliases here ...
 if [ -f ~/.bash_aliases ]; then
@@ -64,8 +64,39 @@ if [[ "$dev" =~ "$(uname -n)" ]]; then
     echo "Hello"
     export PATH="/usr/lib/google-cloud-sdk/bin/:${PATH}"
     export EXTERNAL_GIT_DIR="${HOME}/immunai-product"
-    alias rstud="RSTUDIO_PORT=9123 EXTERNAL_GIT_DIR="${HOME}/immunai-product" EXTERNAL_DATA_DIR="${HOME}/data" immunai-product/modules/containers/docker_root/analysis/bin/start-rstudio"
+    export EXTERNAL_DATA_DIR="${HOME}/data"
+    alias rstud="RSTUDIO_PORT=9123 EXTERNAL_GIT_DIR="${HOME}/immunai-product" EXTERNAL_DATA_DIR="${HOME}/data" ${HOME}/immunai-product/modules/containers/docker_root/analysis/bin/start-rstudio"
+    alias rstud2="CONTAINER_NAME=rstudio2 RSTUDIO_PORT=9125 EXTERNAL_GIT_DIR="${HOME}/immunai-product-rstudio2-clone" EXTERNAL_DATA_DIR="${HOME}/data" ${HOME}/immunai-product/modules/containers/docker_root/analysis/bin/start-rstudio"
+    alias jupy="RSTUDIO_PORT=9124 EXTERNAL_GIT_DIR="${HOME}/immunai-product-jupyter-clone" EXTERNAL_DATA_DIR="${HOME}/data" ${HOME}/immunai-product/modules/containers/docker_root/analysis/bin/start-jupyter"
     alias cont="EXTERNAL_GIT_DIR="${HOME}/immunai-product" EXTERNAL_DATA_DIR="${HOME}/data" immunai-product/modules/containers/docker_root/analysis/bin/start-container"
+    alias rf="readlink -f"
+
+    function gcloud_get() {
+      # gcloud_get: download a file from Google Cloud Storage
+      # Usage: gcloud_get gs://path/to/my/file.ext
+      # Environment variables: GCLOUD_DATA_DIR (default: ~/data/gs_cache)
+      # Output: downloads specified file to ${GCLOUD_DATA_DIR}/path/to/my/file.ext
+
+      GCLOUD_DATA_DIR=${GCLOUD_DATA_DIR:="/home/alon_shaiber/data/gs_cache"}
+      GS_URI=${@:$#} # last parameter 
+      ARGS=${@:1:$#-1} # all but the last parameter
+      GS_FILE_PATH=$(echo "${GS_URI}" | sed 's|gs://||')
+      LOCAL_FILE_PATH="${GCLOUD_DATA_DIR}/${GS_FILE_PATH}"
+
+      if echo "${ARGS}" | grep -q "\-[rR]"; then
+        # recursive, make target dir
+        LOCAL_FILE_DIR="${LOCAL_FILE_PATH}"
+        GS_URI="${GS_URI}/*"
+      else
+        LOCAL_FILE_DIR=$(dirname "${LOCAL_FILE_PATH}")
+      fi
+      mkdir -p "${LOCAL_FILE_DIR}"
+      gsutil -m cp $ARGS "${GS_URI}" "${LOCAL_FILE_PATH}"
+      echo "Saved output to ${LOCAL_FILE_PATH}"
+    }
+
+    # resurrect tmux session
+    if [[ -z $TMUX ]]; then tmux attach || (tmux new-session -d \; run-shell /home/alon_shaiber/.tmux/plugins/tmux-resurrect/scripts/restore.sh \; attach); fi
 fi
 
 # -----------------------------------------------------------------------------
