@@ -43,6 +43,9 @@ fi
 export CLICOLOR=1
 export LSCOLORS=gxhxCxDxBxegedabagaced
 
+function commitskipci() {
+    git commit -m "$1 [skip actions] [skip ci]"
+}
 
 # -----------------------------------------------------------------------------
 # }}} IMMUNAI MACBOOK {{{
@@ -69,6 +72,7 @@ if [[ "$dev" =~ "$(uname -n)" ]]; then
     alias rstud2="CONTAINER_NAME=rstudio2 RSTUDIO_PORT=9125 EXTERNAL_GIT_DIR="${HOME}/immunai-product-rstudio2-clone" EXTERNAL_DATA_DIR="${HOME}/data" ${HOME}/immunai-product/modules/containers/docker_root/analysis/bin/start-rstudio"
     alias jupy="RSTUDIO_PORT=9124 EXTERNAL_GIT_DIR="${HOME}/immunai-product-jupyter-clone" EXTERNAL_DATA_DIR="${HOME}/data" ${HOME}/immunai-product/modules/containers/docker_root/analysis/bin/start-jupyter"
     alias cont="EXTERNAL_GIT_DIR="${HOME}/immunai-product" EXTERNAL_DATA_DIR="${HOME}/data" immunai-product/modules/containers/docker_root/analysis/bin/start-container"
+    alias cont2="ECONTAINER_NAME=cont2 XTERNAL_GIT_DIR="${HOME}/immunai-product" EXTERNAL_DATA_DIR="${HOME}/data" immunai-product/modules/containers/docker_root/analysis/bin/start-container"
     alias rf="readlink -f"
 
     function gcloud_get() {
