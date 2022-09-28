@@ -253,6 +253,13 @@ nnoremap <leader>p :call Param()<CR>
 
 
 " -----------------------------------------------------------------
+" }}} R {{{  #  in R files I want tab to be only two spaces since it seems
+" like a common convention there
+" -----------------------------------------------------------------
+autocmd FileType r setlocal shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType rmd setlocal shiftwidth=2 softtabstop=2 tabstop=2
+
+" -----------------------------------------------------------------
 " }}} Nvim-R {{{  #  turn vim into an R environment
 " -----------------------------------------------------------------
 
