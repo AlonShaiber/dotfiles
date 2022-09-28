@@ -54,7 +54,7 @@ if [[ "$immunaibook" =~ "$(uname -n)" ]]; then
     echo "Hello"
     source .immunairc
 
-    alias python=/usr/local/bin/python3
+#    alias python=/usr/local/bin/python3
 
     export PATH=/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH
 
