@@ -56,7 +56,8 @@ if [[ "$immunaibook" =~ "$(uname -n)" ]]; then
 
 #    alias python=/usr/local/bin/python3
 
-    export PATH=/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH
+    #export PATH=/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH
+    export PATH=/Library/Frameworks/Python.framework/Versions/3.8/bin:$PATH
 
 fi
 
